@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    protected $table = 'users';
     public function register()
     {
         $data['title'] = 'Register';
@@ -20,7 +19,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'username' => 'required|unique:users',
+            'username' => 'required|unique:tb_user',
             'password' => 'required',
             'password_confirm' => 'required|same:password',
         ]);

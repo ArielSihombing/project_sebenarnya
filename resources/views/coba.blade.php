@@ -12,27 +12,12 @@
     <br />
     <br />
 
-    <table border="1">
-        <tr>
-            <th>nama</th>
-            <th>email</th>
-            <th>subject</th>
-            <th>message</th>
-        </tr>
-        @foreach($contacts as $c)
-        <tr>
-            <td>{{ $c->nama }}</td>
-            <td>{{ $c->email }}</td>
-            <td>{{ $c->subject }}</td>
-            <td>{{ $c->message }}</td>
-            <td>
-                <a href="/mahasiswa/edit/{{ $c->id }}">Edit</a>
-
-                <a href="/mahasiswa/hapus{{ $c->id }}">Hapus</a>
-            </td>
-        </tr>
-        @endforeach
-    </table>
+    @foreach($videos as $video)
+    <video width="640" height="360" controls>
+        <source src="{{ $video->video_music }}" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+      @endforeach
 
 
 </body>

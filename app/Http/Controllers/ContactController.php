@@ -14,7 +14,7 @@ class ContactController extends Controller
         $contacts = DB::table('contacts')->get();
 
         // mengirim data mahasiswa ke view contact
-        return view('contact', ['contacts' => $contacts]);
+        return view('about', ['contacts' => $contacts]);
     }
 
     public function tambah()
